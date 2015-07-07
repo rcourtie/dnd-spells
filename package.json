@@ -5,6 +5,7 @@
   "main": "index.html",
   "dependencies": {
     "alt": "^0.16.0",
+    "express": "^4.13.1",
     "react": "^0.12.2"
   },
   "devDependencies": {
