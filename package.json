@@ -1,27 +1,28 @@
 {
   "name": "dnd-util",
   "version": "0.0.0",
-  "description": "Utilities for playing and running DnD",
+  "description": "It's DNDDDDDD",
   "main": "index.html",
-  "scripts": {
-    "start": "npm run serve | npm run dev",
-    "serve": "./node_modules/.bin/http-server -p 8080",
-    "dev": "webpack-dev-server --progress --colors --port 8090"
-  },
-  "keywords": [
-    "dnd"
-  ],
-  "author": "Rodolphe Courtier <rodolphe.courtier@gmail.com>",
-  "license": "ISC",
   "dependencies": {
-    "alt": "^0.17.0",
-    "react": "^0.13.3"
+    "alt": "^0.16.0",
+    "react": "^0.12.2"
   },
   "devDependencies": {
+    "browserify": "^8.0.3",
+    "reactify": "^0.17.1",
     "node-libs-browser": "^0.5.2",
     "webpack": "^1.9.11",
     "webpack-dev-server": "^1.9.0",
     "http-server": "^0.8.0",
     "jsx-loader": "^0.13.2"
-  }
+  },
+  "scripts": {
+    "build": "browserify -t [reactify --es6] src/App.jsx > build/app.js",
+    "start": "npm run build && open 'index.html' ",
+    "start-webpack": "npm run serve | npm run dev",
+    "serve": "./node_modules/.bin/http-server -p 8080",
+    "dev": "webpack-dev-server --progress --colors --port 8090"
+  },
+  "author": "Josh Perez <josh@goatslacker.com>",
+  "license": "MIT"
 }
