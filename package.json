@@ -14,6 +14,7 @@
   "author": "Rodolphe Courtier <rodolphe.courtier@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "alt": "^0.17.0",
     "react": "^0.13.3"
   },
   "devDependencies": {
